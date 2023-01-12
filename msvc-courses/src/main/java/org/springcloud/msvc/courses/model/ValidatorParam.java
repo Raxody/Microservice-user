@@ -1,8 +1,9 @@
-package org.springcloud.msvc.users.model;
+package org.springcloud.msvc.courses.model;
 
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +18,7 @@ public class ValidatorParam {
                     .getFieldErrors()
                     .forEach(fieldError ->
                             errors.put(fieldError.getField(),
-                                    fieldError.getDefaultMessage()));
+                                     fieldError.getDefaultMessage()));
         }
         return ResponseEntity.badRequest().body(errors);
     }

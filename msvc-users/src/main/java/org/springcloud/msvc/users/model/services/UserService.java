@@ -1,4 +1,4 @@
-package org.springcloud.msvc.users.services;
+package org.springcloud.msvc.users.model.services;
 
 import org.springcloud.msvc.users.model.entity.User;
 
@@ -12,6 +12,11 @@ public interface UserService {
     User save(User user);
     User update(User user);
     boolean delete(Long id);
+
+    Optional<User>  findUserByEmail(String email);
+
+    List<User> findAllUsersById(Iterable<Long> userId);
+
 
 
 }
